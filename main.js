@@ -1,8 +1,5 @@
 const electron = require('electron') // Electron tanımladım
 const path = require('path') // path tanımladım
-var dialog = electron.dialog;
-
-
 
 //Node Api alma
 const root = fs.readdirSync('/')
