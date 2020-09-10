@@ -1,9 +1,6 @@
 const electron = require('electron') // Electron tanımladım
 const path = require('path') // path tanımladım
-const { ipcMain  } = require('electron') 
 var dialog = electron.dialog;
-var fs = require('fs');
-const S3 = require('aws-sdk/clients/s3')
 
 
 
