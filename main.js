@@ -4,26 +4,27 @@ const path = require('path') // path tanımladım
 //Node Api alma
 const root = fs.readdirSync('/')
 
+
 const { app, BrowserWindow  } = require('electron') // Electron pencere Browser Window(Tarayıcı Penceresi) tanımladım
 
 
 
 function yeniPencere () {  // Tarayıcı da pencere oluşturur
     const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 800, //Pencere Genişliğini Belirler.
+    height: 600, //Pencere Yüksekliğini Belirler.
     webPreferences: {
         nodeIntegration: true
 }
     })
      
-    // Tarayıcı da index.html açar
+    // Pencere de belirlediğimiz html dosyasını açar.
 win.loadFile("index.html")
-    win.webContents.openDevTools()
+    win.webContents.openDevTools() // Ardından DevTOOLS açar.
 
 }
 
-app.addRecentDocument('Users\User\OneDrive\Masaüstü\electron application')
+app.addRecentDocument('Users\User\OneDrive\Masaüstü\electron application') //Proje yolu
 app.clearRecentDocuments()
 
 app.whenReady().then(() => {
