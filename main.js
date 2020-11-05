@@ -1,42 +1,42 @@
-const electron = require('electron') // Electron tanımladım
-const path = require('path') // path tanımladım
+const electron = require('electron') // Electron I defined
+const path = require('path') // Path I defind
 
-//Node Api alma
+//Getting Node Api
 const root = fs.readdirSync('/')
 
 
-const { app, BrowserWindow  } = require('electron') // Electron pencere Browser Window(Tarayıcı Penceresi) tanımladım
+const { app, BrowserWindow  } = require('electron') // I have defined the Electron window Browser Window
 
 
 
-function yeniPencere () {  // Tarayıcı da pencere oluşturur
+function newWindow () {  // Creates a window in the browser
     const win = new BrowserWindow({
-    width: 800, //Pencere Genişliğini Belirler.
-    height: 600, //Pencere Yüksekliğini Belirler.
+    width: 800, //Determines Window Width.
+    height: 600, //Determines the Window Height.
     webPreferences: {
         nodeIntegration: true
 }
     })
      
-    // Pencere de belirlediğimiz html dosyasını açar.
+    // The window also opens the html file we specified.
 win.loadFile("index.html")
-    win.webContents.openDevTools() // Ardından DevTOOLS açar.
+    win.webContents.openDevTools() // Then DevTOOLS opens.
 
 }
 
-app.addRecentDocument('Users\User\OneDrive\Masaüstü\electron application') //Proje yolu
+app.addRecentDocument('') //Project path
 app.clearRecentDocuments()
 
 app.whenReady().then(() => {
     yeniPencere()
 
 
-// Darwin ile electron tarayıcısını kapatma
+// Turn off electron browser with Darwin
 app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') app.quit()
   })
 
 app.on('activate', function () {
-    if (BrowserWindow.getAllWindows().length === 0 ) yeniPencere()
+    if (BrowserWindow.getAllWindows().length === 0 ) newWindow()
   })
 })
