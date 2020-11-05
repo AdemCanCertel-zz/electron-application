@@ -1,6 +1,6 @@
-# ElectronJS ile kolay uygulama yapımı
+# Easy application construction with ElectronJS
 
-ElectronJS Döküman _(https://www.electronjs.org/)_
+ElectronJS Docs _(https://www.electronjs.org/)_
 
 ```
 git clone https://github.com/AdemCan0BEY/electron-application.git
