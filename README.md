@@ -1,7 +1,7 @@
 # Easy application construction with ElectronJS
 
 **ElectronJS Document**
-ElectronJS Docs _(https://www.electronjs.org/)_
+ElectronJS Docs _(https://www.electronjs.org/docs)_
 
 **İnformation**
 Electron application can use this sample project.
