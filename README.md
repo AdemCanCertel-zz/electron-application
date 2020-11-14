@@ -1,11 +1,14 @@
 # Easy application construction with ElectronJS
 
+**ElectronJS Document**
 ElectronJS Docs _(https://www.electronjs.org/)_
 
-```
-git clone https://github.com/AdemCan0BEY/electron-application.git
-```
-**npm install**
+**İnformation**
+Electron application can use this sample project.
 
-**npm start**
+```$ git clone https://github.com/AdemCan0BEY/electron-application.git```
+
+```npm install```
+
+```npm start```
 
